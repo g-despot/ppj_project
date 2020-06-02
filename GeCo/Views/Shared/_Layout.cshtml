@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeCo</title>
+    <base href="/" />
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Bootstrap_override.css" asp-append-version="true" />
+    <link rel="shortcut icon" type="image/png" href="~/Images/gecko_green_192.png">
+</head>
+<body style="background: url(./Images/pozadina_2.png);">
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+                <section class="contact">
+                    <header>
+                        <h4>geco.application@gmail.com</h4>
+                    </header>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+@*<a href="~/Views/Shared/Error.cshtml">~/Views/Shared/Error.cshtml</a>*@

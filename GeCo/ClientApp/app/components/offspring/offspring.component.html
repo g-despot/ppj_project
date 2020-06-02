@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h4>OMJERI</h4>
+            </div>
+            <div class="panel-body" style="word-wrap: break-word;">
+                <h4 *ngFor="let stat of stats">
+                    {{ stat.proportions }} {{ stat.values }}
+                </h4>
+                <h4 *ngIf="inheritanceType.type1 === linkedGenes && inheritanceType.type2 === linkedGenes">cM: {{cM}} </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6" *ngFor="let c of children">
+        <child-organism [characteristic]="characteristic"
+                        [trait1]="c.child.trait1"
+                        [trait2]="c.child.trait2"
+                        [traits1]="traits1"
+                        [traits2]="traits2"
+                        [canChange]="false">
+        </child-organism>
+    </div>
+</div>
